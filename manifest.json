@@ -1,0 +1,15 @@
+{
+  "run_id": "973c6a6d182f",
+  "timestamp_utc": "2025-08-23T12:28:23Z",
+  "topic": "AutoserGPT AI Workstation \u2014 Final Polished Program Plan (MVP + S5 Backbone, Hardened)",
+  "topic_hash": "99a8e453b0fd0794",
+  "files": [
+    "LICENSE_ZQ_AI_LOGIC.txt",
+    "SECURITY.md",
+    "ops/incident_response.md",
+    ".github/workflows/ci.yml",
+    "PLAN/AutoserGPT_Final_Polished_Plan_MVP_S5.md",
+    "PLAN/AutoserGPT_Final_Polished_Plan_MVP_S5.html",
+    "README.md"
+  ]
+}

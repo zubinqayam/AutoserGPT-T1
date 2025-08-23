@@ -1,0 +1,67 @@
+name: ci
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  build-and-scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write   # for keyless cosign
+      actions: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install cyclonedx
+        run: |
+          npm install -g @cyclonedx/cyclonedx-npm
+
+      - name: Generate SBOM (CycloneDX)
+        run: |
+          cyclonedx-npm --output-format json --output-file sbom.json || true
+
+      - name: Setup osv-scanner
+        uses: google/osv-scanner-action@v1
+        with:
+          args: -r . -o vuln_report.txt
+
+      - name: Fail on High/Critical
+        run: |
+          if grep -Ei 'CRITICAL|HIGH' vuln_report.txt; then
+            echo 'High/Critical vulnerabilities found'; exit 1; fi
+
+      - name: Build (placeholder)
+        run: |
+          mkdir -p release
+          echo 'Build artifacts go here.' > release/thinker_report_PLACEHOLDER.txt
+
+      - name: Checksums
+        run: |
+          (cd release && sha256sum * > checksums.sha256)
+
+      - name: Cosign (keyless) - sign the placeholder artifact
+        uses: sigstore/cosign-installer@v3.6.0
+      - name: Sign with Cosign
+        env:
+          COSIGN_EXPERIMENTAL: "true"
+        run: |
+          cosign sign-blob --yes --output-certificate release/cosign.cert             --output-signature release/cosign.sig             --bundle release/cosign.bundle             release/thinker_report_PLACEHOLDER.txt
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: autoser_mvp_release
+          path: |
+            release/**
+            sbom.json
+            vuln_report.txt
