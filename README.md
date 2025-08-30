@@ -5,7 +5,7 @@
 **Topic Hash:** 99a8e453b0fd0794
 
 This kit includes:
-- Hardened **SECURITY.md** and **IRP** (`ops/incident_response.md`)
+- Hardened **SECURITY.md** and **IRP** (`incident_response.md`)
 - CI workflow with **SBOM** + **osv-scanner** + **cosign** signing
 - Proprietary **LICENSE**
 - Final MVP Plan (Markdown + HTML) suitable for printing to PDF
