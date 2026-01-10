@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zubin Qayam - Strategic Healthcare Innovation & Industrial Development Leader | Oman Vision 2040</title>
+    <meta name="description" content="Strategic healthcare innovation leader facilitating multinational partnerships in Oman's Vision 2040. Expertise in industrial transformation, port development, and healthcare technology integration.">
+    <meta name="keywords" content="healthcare innovation, Oman Vision 2040, industrial development, strategic partnerships, Sohar Freezone, port development, healthcare leadership">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zubinqayam.github.io/portfolio/">
+    <meta property="og:title" content="Zubin Qayam - Strategic Healthcare Innovation Leader">
+    <meta property="og:description" content="Leading healthcare innovation and strategic partnerships in Oman's Vision 2040 industrial transformation program.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zubinqayam.github.io/portfolio/">
+    <meta property="twitter:title" content="Zubin Qayam - Strategic Healthcare Innovation Leader">
+    <meta property="twitter:description" content="Leading healthcare innovation and strategic partnerships in Oman's Vision 2040 industrial transformation program.">
+    
+    <link rel="canonical" href="https://zubinqayam.github.io/portfolio/">
+    
+    <style>
+        :root {
+            /* Primitive Color Tokens */
+            --color-white: rgba(255, 255, 255, 1);
+            --color-black: rgba(0, 0, 0, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-gray-200: rgba(245, 245, 245, 1);
+            --color-gray-300: rgba(167, 169, 169, 1);
+            --color-gray-400: rgba(119, 124, 124, 1);
+            --color-slate-50: rgba(248, 250, 252, 1);
+            --color-slate-300: rgba(203, 213, 225, 1);
+            --color-slate-400: rgba(148, 163, 184, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-slate-600: rgba(71, 85, 105, 1);
+            --color-slate-700: rgba(51, 65, 85, 1);
+            --color-slate-800: rgba(30, 41, 59, 1);
+            --color-blue-600: rgba(37, 99, 235, 1);
+            --color-blue-700: rgba(29, 78, 216, 1);
+            --color-emerald-600: rgba(5, 150, 105, 1);
+            --color-emerald-700: rgba(4, 120, 87, 1);
+            
+            /* Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--color-slate-700);
+            background: linear-gradient(135deg, var(--color-cream-50) 0%, var(--color-cream-100) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* Header */
+        .header {
+            background: var(--color-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-md) 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-slate-800);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+        }
+
+        .nav-link {
+            color: var(--color-slate-600);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--color-blue-600);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: var(--space-2xl) 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--color-slate-800);
+            margin-bottom: var(--space-md);
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-slate-600);
+            margin-bottom: var(--space-xl);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--color-blue-600);
+            color: var(--color-white);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-blue-700);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--color-white);
+            color: var(--color-slate-700);
+            border: 2px solid var(--color-slate-300);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-slate-50);
+            border-color: var(--color-slate-400);
+        }
+
+        /* Sections */
+        .section {
+            padding: var(--space-2xl) 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-slate-800);
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+
+        .about-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-blue-600), var(--color-emerald-600));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: var(--color-white);
+            margin: 0 auto;
+        }
+
+        .about-text {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--color-slate-600);
+        }
+
+        /* Experience Cards */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .experience-card {
+            background: var(--color-white);
+            padding: var(--space-xl);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, var(--color-blue-600), var(--color-emerald-600));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--color-white);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-slate-800);
+            margin-bottom: var(--space-xs);
+        }
+
+        .card-subtitle {
+            color: var(--color-slate-500);
+            font-size: 0.875rem;
+        }
+
+        .card-description {
+            color: var(--color-slate-600);
+            line-height: 1.6;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-xl);
+        }
+
+        .skill-item {
+            background: var(--color-white);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: var(--color-slate-800);
+        }
+
+        /* Contact */
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            color: var(--color-slate-600);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: var(--color-blue-600);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-slate-800);
+            color: var(--color-white);
+            text-align: center;
+            padding: var(--space-xl) 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Zubin Qayam</a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title fade-in">Strategic Healthcare Innovation Leader</h1>
+                <p class="hero-subtitle fade-in">Driving Oman Vision 2040 through multinational partnerships, industrial transformation, and cutting-edge healthcare technology integration</p>
+                <div class="hero-cta fade-in">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#experience" class="btn btn-secondary">View Experience</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        🏥
+                    </div>
+                    <div class="about-text">
+                        <p>As a strategic healthcare innovation leader, I specialize in facilitating multinational partnerships that drive Oman's Vision 2040 industrial transformation program. My expertise spans healthcare technology integration, port development initiatives, and strategic industrial development across the Sohar Freezone and broader regional markets.</p>
+                        <br>
+                        <p>With a proven track record in building bridges between international healthcare innovators and local industrial capabilities, I focus on creating sustainable partnerships that advance both technological advancement and economic diversification goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Key Experience Areas</h2>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <div class="card-icon">🏭</div>
+                            <div>
+                                <h3 class="card-title">Industrial Development</h3>
+                                <p class="card-subtitle">Oman Vision 2040 Implementation</p>
+                            </div>
+                        </div>
+                        <p class="card-description">Leading strategic initiatives in industrial transformation, focusing on healthcare manufacturing capabilities and technology transfer partnerships within the Sohar Freezone ecosystem.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <div class="card-icon">🚢</div>
+                            <div>
+                                <h3 class="card-title">Port Development</h3>
+                                <p class="card-subtitle">Strategic Infrastructure Planning</p>
+                            </div>
+                        </div>
+                        <p class="card-description">Developing port infrastructure capabilities to support healthcare supply chain optimization and facilitate international trade partnerships in medical technology sectors.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <div class="card-icon">🤝</div>
+                            <div>
+                                <h3 class="card-title">Multinational Partnerships</h3>
+                                <p class="card-subtitle">Healthcare Innovation Networks</p>
+                            </div>
+                        </div>
+                        <p class="card-description">Establishing and managing strategic partnerships with international healthcare innovators, facilitating knowledge transfer and joint venture development opportunities.</p>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <div class="card-icon">💡</div>
+                            <div>
+                                <h3 class="card-title">Healthcare Technology</h3>
+                                <p class="card-subtitle">Innovation Integration</p>
+                            </div>
+                        </div>
+                        <p class="card-description">Integrating cutting-edge healthcare technologies into regional infrastructure, ensuring alignment with national healthcare objectives and international best practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">📊</div>
+                        <div class="skill-name">Strategic Planning</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🌐</div>
+                        <div class="skill-name">International Relations</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🏥</div>
+                        <div class="skill-name">Healthcare Systems</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🔬</div>
+                        <div class="skill-name">Technology Integration</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">📈</div>
+                        <div class="skill-name">Economic Development</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🧭</div>
+                        <div class="skill-name">Project Management</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Connect</h2>
+                <div class="contact-content">
+                    <p>Interested in discussing strategic partnerships, healthcare innovation opportunities, or Oman Vision 2040 initiatives? Let's connect to explore how we can collaborate on transformative projects.</p>
+                    <div class="contact-info">
+                        <a href="mailto:contact@zubinqayam.com" class="contact-item">
+                            <span>📧</span>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://linkedin.com/in/zubinqayam" class="contact-item">
+                            <span>💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="tel:+968-XXXXXXXX" class="contact-item">
+                            <span>📱</span>
+                            <span>Phone</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Zubin Qayam. Strategic Healthcare Innovation & Industrial Development Leader.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.experience-card, .skill-item, .section').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add hover effects for experience cards
+        document.querySelectorAll('.experience-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Dynamic typing effect for hero title (optional enhancement)
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect on page load
+        window.addEventListener('load', () => {
+            const heroTitle = document.querySelector('.hero-title');
+            const originalText = heroTitle.textContent;
+            typeWriter(heroTitle, originalText, 80);
+        });
+    </script>
+  </body>
+</html>
