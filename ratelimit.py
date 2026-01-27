@@ -24,7 +24,7 @@ def limiter(limit: int = 60, window_sec: int = 60):
                     break
             if req is None:
                 req = kwargs.get("request", None)
-            
+
             # If no request found, just call the function
             if req is None:
                 if inspect.iscoroutinefunction(func):
@@ -46,7 +46,7 @@ def limiter(limit: int = 60, window_sec: int = 60):
                     headers={"Retry-After": str(retry_after)},
                 )
             _STORE[k] = (window_start, count + 1)
-            
+
             # Call the original function
             if inspect.iscoroutinefunction(func):
                 return await func(*args, **kwargs)
