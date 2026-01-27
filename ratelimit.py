@@ -25,14 +25,14 @@ def limiter(limit: int = 60, window_sec: int = 60):
             if req is None:
                 req = kwargs.get("request", None)
 
-            # If no request found, just call the function
+            # If no request found (e.g., in tests or direct function calls), execute without rate limiting
             if req is None:
                 if inspect.iscoroutinefunction(func):
                     return await func(*args, **kwargs)
                 else:
                     return func(*args, **kwargs)
 
-            # Rate limiting logic
+            # Apply rate limiting: check window, count requests, and enforce limits
             now = time.time()
             k = _key(req)
             window_start, count = _STORE.get(k, (now, 0))
