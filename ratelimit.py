@@ -1,5 +1,7 @@
 
 import time
+import functools
+import inspect
 from typing import Callable, Dict, Tuple
 from fastapi import Request
 from fastapi.responses import JSONResponse
@@ -13,6 +15,7 @@ def _key(request: Request) -> str:
 
 def limiter(limit: int = 60, window_sec: int = 60):
     def decorator(func: Callable):
+        @functools.wraps(func)
         async def wrapper(*args, **kwargs):
             req = None
             for a in args:
@@ -21,9 +24,15 @@ def limiter(limit: int = 60, window_sec: int = 60):
                     break
             if req is None:
                 req = kwargs.get("request", None)
-            if req is None:
-                return await func(*args, **kwargs)
 
+            # If no request found (e.g., in tests or direct function calls), execute without rate limiting
+            if req is None:
+                if inspect.iscoroutinefunction(func):
+                    return await func(*args, **kwargs)
+                else:
+                    return func(*args, **kwargs)
+
+            # Apply rate limiting: check window, count requests, and enforce limits
             now = time.time()
             k = _key(req)
             window_start, count = _STORE.get(k, (now, 0))
@@ -37,6 +46,11 @@ def limiter(limit: int = 60, window_sec: int = 60):
                     headers={"Retry-After": str(retry_after)},
                 )
             _STORE[k] = (window_start, count + 1)
-            return await func(*args, **kwargs)
+
+            # Call the original function
+            if inspect.iscoroutinefunction(func):
+                return await func(*args, **kwargs)
+            else:
+                return func(*args, **kwargs)
         return wrapper
     return decorator

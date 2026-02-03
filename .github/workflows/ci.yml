@@ -31,7 +31,7 @@ jobs:
           cyclonedx-npm --output-format json --output-file sbom.json || true
 
       - name: Setup osv-scanner
-        uses: google/osv-scanner-action@v1
+        uses: google/osv-scanner-action@v1.9.0
         with:
           args: -r . -o vuln_report.txt
 
